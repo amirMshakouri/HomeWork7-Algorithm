@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace HomeWork7_Algorithm
+{
+    internal class PrimeChecker
+    {
+        public static bool IsPrime(int number)
+        {
+            if (number < 2)
+                return false;
+
+            for (int i = 2; i * i <= number; i++)
+            {
+                if (number % i == 0)
+                    return false;
+            }
+
+            return true;
+        }
+    }
+}
